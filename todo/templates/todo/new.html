@@ -1,0 +1,24 @@
+{% extends "todo/base.html" %}
+
+{% block bodyblock %}
+    <form action="/todos/create/" method="post">
+      {% csrf_token %}
+      <div class="form-row align-items-center">
+          <div class="col-auto">
+            <label for="exampleInputtitle">TITLE</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter title">
+          </div>
+          <div class="col-auto">
+            <label for="exampleInputcontent">content</label>
+            <input type="text" class="form-control" name="content" placeholder="Enter content">
+          </div>
+          <div class="col-auto">
+            <label for="exampleInputdate">date</label>
+            <input type="date" class="form-control" name="due_date" placeholder="Choose date">
+          </div>
+          <div class="col-auto">
+              <input type="submit" value="Submit/"/>
+          </div>
+      </div>
+    </form>
+{% endblock %}

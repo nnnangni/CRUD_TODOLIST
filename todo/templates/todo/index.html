@@ -1,0 +1,18 @@
+{% extends "todo/base.html" %}
+
+{% block bodyblock %}
+    <div class="alert alert-primary" role="alert">
+      여기는 INDEX 입니다!
+    </div>
+    {% for todo in todos %}
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{todo.title}}</h5>
+            <p class="card-text">{{todo.due_date}}</p>
+            <a href="/todos/{{todo.pk}}" class="card-link">할일보기</a>
+          </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
+

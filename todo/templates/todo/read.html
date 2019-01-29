@@ -1,0 +1,15 @@
+{% extends "todo/base.html" %}
+    
+{% block bodyblock %}
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">Todo</div>
+      <div class="card-body text-info">
+        <h3 class="card-title">{{todo.title}}</h3>
+        <p class="card-text">{{todo.content}}</p>
+        <p class="card-text">{{todo.due_date}}</p>
+        <a href="/todos/{{todo.id}}/delete/">삭제</a>
+        <a href="/todos/{{todo.id}}/edit/">수정</a>
+      </div>
+    </div>
+{% endblock %}
+
